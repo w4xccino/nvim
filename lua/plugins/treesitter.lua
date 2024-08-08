@@ -16,11 +16,11 @@ return {
 			enable = true,
 		},
 		indent = {
-			enabled = true,
+			enable = true,
 		},
 		textobjects = {
 			select = {
-				enabled = true,
+				enable = true,
 				lookahead = true,
 				keymaps = {
 					["af"] = "@function.outer",
