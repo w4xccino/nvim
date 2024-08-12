@@ -22,5 +22,6 @@ return {
         }
       }
     })
+    require('lspconfig').intelephense.setup{}
   end
 }

@@ -11,6 +11,7 @@ return {
 			'lua',
 			'php',
 			'luadoc',
+			'html',
 		},
 		highlight = {
 			enable = true,
