@@ -23,5 +23,7 @@ return {
       }
     })
     require('lspconfig').intelephense.setup{}
+    require('lspconfig').dockerls.setup{}
+    require('lspconfig').docker_compose_language_service.setup{}
   end
 }
