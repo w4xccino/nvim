@@ -7,6 +7,7 @@ opt.clipboard = "unnamedplus"
 opt.number = true
 opt.relativenumber = true
 opt.undofile = true
+opt.cursorline = true
 
 g.mapleader = " "
 g.maplocalleader = "\\"
