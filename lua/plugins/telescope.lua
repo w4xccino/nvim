@@ -18,6 +18,12 @@ return {
         override_file_sorter = true,
         case_mode = 'smart_case',
       },
+      themes = {
+        persist = {
+          enabled = true,
+          path = vim.fn.stdpath("config") .. "/lua/colorscheme.lua"
+        },
+      },
     }
   },
   config = function (opts)

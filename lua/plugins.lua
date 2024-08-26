@@ -1,11 +1,32 @@
 return {
 	{
-		"folke/tokyonight.nvim",
+		'folke/tokyonight.nvim',
 		lazy = false,
-		priority = 1000,
 		opts = {},
-    config = function ()
-      vim.cmd('colorscheme tokyonight')
-    end
+	},
+	{
+		'navarasu/onedark.nvim',
+		lazy = false,
+		opts = {},
+	},
+	{
+		'tiagovla/tokyodark.nvim',
+		lazy = false,
+		opts = {},
+	},
+	{
+		'maxmx03/fluoromachine.nvim',
+		lazy = false,
+		opts = {},
+	},
+	{
+		'rebelot/kanagawa.nvim',
+		lazy = false,
+		opts = {},
+	},
+	{
+		'olimorris/onedarkpro.nvim',
+		lazy = false,
+		opts = {},
 	},
 }
