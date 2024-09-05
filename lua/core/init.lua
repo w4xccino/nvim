@@ -8,6 +8,7 @@ opt.number = true
 opt.relativenumber = true
 opt.undofile = true
 opt.cursorline = true
+opt.ignorecase = true
 
 g.mapleader = " "
 g.maplocalleader = "\\"

@@ -1,7 +1,8 @@
 return {
 	'nvim-treesitter/nvim-treesitter',
 	dependencies = {
-		"nvim-treesitter/nvim-treesitter-textobjects",
+		'nvim-treesitter/nvim-treesitter-textobjects',
+    'nvim-treesitter/nvim-treesitter-context',
 	},
 	build = ':TSUpdate',
 	event = 'VeryLazy',
@@ -10,6 +11,8 @@ return {
 		ensure_installed = {
 			'lua',
 			'php',
+      'php_only',
+      'blade',
 			'luadoc',
 			'html',
 		},
@@ -34,4 +37,31 @@ return {
 			},
 		},
 	},
+  config = function (_, opts)
+		local parser_config = require "nvim-treesitter.parsers".get_parser_configs()
+		parser_config.blade = {
+			install_info = {
+				url = "https://github.com/EmranMR/tree-sitter-blade",
+				files = {"src/parser.c"},
+				branch = "main",
+        generate_requires_npm = true,
+        requires_generate_from_grammar = true,
+			},
+			filetype = "blade"
+		}
+		-- -- Set the *.blade.php file to be filetype of blade 
+		-- vim.cmd([[
+		-- 	augroup BladeFiltypeRelated
+		-- 	  au BufNewFile,BufRead *.blade.php set ft=blade
+		-- 	augroup END
+		-- ]])
+
+    vim.filetype.add({
+      pattern = {
+        ['.*%.blade%.php'] = 'blade',
+      }
+    })
+    require('treesitter-context').setup()
+    require('nvim-treesitter.configs').setup(opts)
+  end
 }
